@@ -1,6 +1,4 @@
-html {
-    box-sizing: border-box;
-}
+html { box-sizing: border-box; }
 
 *,
 *::before,
@@ -17,7 +15,7 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    background: #ffffff url('../img/night.jpeg'); /* Background pattern from Subtle Patterns */
     font-family: 'Coda', cursive;
 }
 
@@ -31,17 +29,48 @@ body {
 h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    color: gold;
 }
 
-/*
- * Styles for the deck of cards
- */
+.timer{ padding: 10px; }
+ 
+ /*style for button refrence http://css3buttongenerator.com*/
 
-.deck {
+button{
+display: inline-block;
+margin-left: 190px;
+font-size: 50px;
+border-radius: 8%;
+cursor: pointer;
+display: flex;
+flex-wrap: wrap; 
+background: #000000;
+background-image: -webkit-linear-gradient(top, #000000, #FFC800);
+background-image: -moz-linear-gradient(top, #000000, #FFC800);
+background-image: -ms-linear-gradient(top, #000000, #FFC800);
+background-image: -o-linear-gradient(top, #000000, #FFC800);
+background-image: linear-gradient(to bottom, #000000, #FFC800);
+-webkit-border-radius: 29;
+-moz-border-radius: 29;
+border-radius: 29px;
+font-family: Georgia;
+color: #050504;
+font-size: 36px;
+padding: 6px 13px 7px 15px;
+text-decoration: none; }
+
+button:hover {
+  background: #FFCD00;
+  text-decoration: none;
+}
+
+/*Styles for the deck of cards*/
+ 
+ .deck {
     width: 660px;
     min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
-    padding: 32px;
+    background: #ffffff url('../img/metal.jpg');
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     display: flex;
@@ -51,12 +80,16 @@ h1 {
     margin: 0 0 3em;
 }
 
+
+.disabled { pointer-events: none; 
+color : red;}
+
 .deck .card {
     height: 125px;
     width: 125px;
-    background: #2e3d49;
+    /*background: #E6CC00;*/
     font-size: 0;
-    color: #ffffff;
+    color: black;
     border-radius: 8px;
     cursor: pointer;
     display: flex;
@@ -67,7 +100,7 @@ h1 {
 
 .deck .card.open {
     transform: rotateY(0);
-    background: #02b3e4;
+    background: #FAFF00;
     cursor: default;
 }
 
@@ -75,9 +108,11 @@ h1 {
     font-size: 33px;
 }
 
+ 
+
 .deck .card.match {
     cursor: default;
-    background: #02ccba;
+    background: #FFFACD;
     font-size: 33px;
 }
 
@@ -89,6 +124,7 @@ h1 {
     text-align: left;
     width: 345px;
     margin-bottom: 10px;
+    color: gold;
 }
 
 .score-panel .stars {
@@ -107,3 +143,5 @@ h1 {
     float: right;
     cursor: pointer;
 }
+
+footer { text-align: center; color: gold; }
